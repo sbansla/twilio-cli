@@ -4,9 +4,9 @@
  * is free of TODO's.
  */
 
-const { TwilioClientCommand } = require('@twilio/cli-core').baseCommands;
-const { doesObjectHaveProperty } = require('@twilio/cli-core').services.JSUtils;
-const { logger } = require('@twilio/cli-core').services.logging;
+const { TwilioClientCommand } = require('@sbansla/cli-core').baseCommands;
+const { doesObjectHaveProperty } = require('@sbansla/cli-core').services.JSUtils;
+const { logger } = require('@sbansla/cli-core').services.logging;
 const { camelCase } = require('@twilio/cli-core').services.namingConventions;
 const { Flags: flags } = require('@oclif/core');
 

@@ -61,14 +61,14 @@ jobs:
           INPUT_REF: main
           INPUT_REPO: homebrew-brew
       - name: Global - Testing installation of Twilio CLI (1)
-        if: ${{ github.respository != 'twilio/draft-release-branch' }}
+        if: ${{ github.respository != 'sbansla/draft-release-branch' }}
         env:
           REPO_NAME: ${{ github.repository_owner }}
         run: |
           brew tap $REPO_NAME/brew && brew install twilio
           .github/scripts/cmds-to-test.sh
       - name: Global - Testing upgrade Twilio CLI (2)
-        if: ${{ github.respository != 'twilio/draft-release-branch' }}
+        if: ${{ github.respository != 'sbansla/draft-release-branch' }}
         env:
           REPO_NAME: ${{ github.repository_owner }}
         run: |
@@ -76,14 +76,14 @@ jobs:
           brew upgrade twilio
           .github/scripts/cmds-to-test.sh
       - name: Draft - Testing installation of Twilio CLI (1)
-        if: ${{ github.respository == 'twilio/draft-release-branch' }}
+        if: ${{ github.respository == 'sbansla/draft-release-branch' }}
         env:
           REPO_NAME: ${{ github.repository_owner }}
         run: |
           brew tap $REPO_NAME/brew && brew install twiliodraft
           .github/scripts/cmds-to-test.sh
       - name: Draft - Testing upgrade Twilio CLI (2)
-        if: ${{ github.respository == 'twilio/draft-release-branch' }}
+        if: ${{ github.respository == 'sbansla/draft-release-branch' }}
         env:
           REPO_NAME: ${{ github.repository_owner }}
         run: |
@@ -255,22 +255,22 @@ jobs:
           if ! command -v twilio > /dev/null; then twilio() { printf '%sCLI is not installed, all good. '; } else echo "CLI is installed already, Abort."; exit 1; fi
           twilio --version
       - name: Node Install - Testing installation of Twilio CLI (1)
-        if: ${{ github.respository != 'twilio/draft-release-branch' }}
+        if: ${{ github.respository != 'sbansla/draft-release-branch' }}
         run: |
           npm install -g twilio-cli
           .github/scripts/cmds-to-test.sh
       - name: NPM Update - Testing upgrade Twilio CLI (2)
-        if: ${{ github.respository != 'twilio/draft-release-branch' }}
+        if: ${{ github.respository != 'sbansla/draft-release-branch' }}
         run: |
           npm update -g twilio-cli
           .github/scripts/cmds-to-test.sh
       - name: Node Install - Testing installation of Twilio CLI (1)
-        if: ${{ github.respository == 'twilio/draft-release-branch' }}
+        if: ${{ github.respository == 'sbansla/draft-release-branch' }}
         run: |
           npm install -g twilio-cli@$(npm view twilio-cli dist-tags.draft-release-branch)
           .github/scripts/cmds-to-test.sh
       - name: NPM Update - Testing upgrade Twilio CLI (2)
-        if: ${{ github.respository == 'twilio/draft-release-branch' }}
+        if: ${{ github.respository == 'sbansla/draft-release-branch' }}
         run: |
           npm update -g twilio-cli@$(npm view twilio-cli dist-tags.draft-release-branch)
           .github/scripts/cmds-to-test.sh
@@ -302,7 +302,7 @@ jobs:
         run: |
           (New-Object System.Net.WebClient).DownloadFile('https://get.scoop.sh', 'scoop.ps1')
           ./scoop.ps1 -RunAsAdmin
-          scoop bucket add twilio-scoop https://github.com/twilio/scoop-twilio-cli
+          scoop bucket add twilio-scoop https://github.com/sbansla/scoop-twilio-cli
           scoop install twilio
           twilio --version
           twilio api --help
@@ -313,7 +313,7 @@ jobs:
         run: |
            (New-Object System.Net.WebClient).DownloadFile('https://get.scoop.sh', 'scoop.ps1')
            ./scoop.ps1 -RunAsAdmin
-           scoop bucket add twilio-scoop https://github.com/twilio/scoop-twilio-cli
+           scoop bucket add twilio-scoop https://github.com/sbansla/scoop-twilio-cli
            scoop install twiliodraft
            twilio --version
            twilio api --help

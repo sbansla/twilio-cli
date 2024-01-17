@@ -12,7 +12,7 @@ from datadog_api_client.v1.model.series import Series
 import requests
 
 
-github_url="https://api.github.com/repos/twilio/twilio-cli/releases"
+github_url="https://api.github.com/repos/sbansla/twilio-cli/releases"
 response = requests.get(github_url)
 output=response.json()
 rpm_count = deb_count = exe_count = pkg_count = 0

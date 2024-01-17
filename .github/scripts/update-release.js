@@ -1,4 +1,4 @@
-const { updateRelease } = require('@twilio/cli-core').releaseScripts.UpdateRelease;
+const { updateRelease } = require('@sbansla/cli-core').releaseScripts.UpdateRelease;
 (async () => {
   await updateRelease();
 })();

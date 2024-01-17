@@ -1,4 +1,4 @@
-const { triggerWorkflow } = require('@twilio/cli-core').releaseScripts.TriggerWorkflow;
+const { triggerWorkflow } = require('@sbansla/cli-core').releaseScripts.TriggerWorkflow;
 (async () => {
   await triggerWorkflow();
 })();
