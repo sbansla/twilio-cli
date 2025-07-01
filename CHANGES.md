@@ -1,3 +1,695 @@
+## [6.0.0](https://github.com/twilio/twilio-cli/compare/5.23.1...6.0.0) (2025-06-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* node 20 update
+
+### Library - Features
+
+* Breaking change commit ([#651](https://github.com/twilio/twilio-cli/issues/651)) ([e7d15dd](https://github.com/twilio/twilio-cli/commit/e7d15ddf575a7c62ecf5d5e398c25d6e7599dfb0))
+
+
+### Library - Fixes
+
+* removed ngrok dependecy ([#635](https://github.com/twilio/twilio-cli/issues/635)) ([b20b8f4](https://github.com/twilio/twilio-cli/commit/b20b8f46959d3ba2b5656de55cba688e8057ef51))
+
+
+### Library - Chores
+
+* Add rollback.yaml ([#625](https://github.com/twilio/twilio-cli/issues/625)) ([5cd0035](https://github.com/twilio/twilio-cli/commit/5cd00350da492584b5c1efa5bf9b16c3852df3ad))
+* Create rollback.yaml ([#627](https://github.com/twilio/twilio-cli/issues/627)) ([e49dd51](https://github.com/twilio/twilio-cli/commit/e49dd512a97ab2eb2596cc847b1a23044115abef))
+* node lts version set ([#636](https://github.com/twilio/twilio-cli/issues/636)) ([cef5e9c](https://github.com/twilio/twilio-cli/commit/cef5e9c42a5329181e6591d1fb8a0faa51eabba8))
+* release ([#652](https://github.com/twilio/twilio-cli/issues/652)) ([99fb955](https://github.com/twilio/twilio-cli/commit/99fb95500c45a83a8e6372efeca069a8885ba7a7))
+* release test ([#629](https://github.com/twilio/twilio-cli/issues/629)) ([9167d28](https://github.com/twilio/twilio-cli/commit/9167d28975e0557f87c2717411611a73f133fd50))
+* update cli-core version ([a1f54d9](https://github.com/twilio/twilio-cli/commit/a1f54d95c56295d74602d8f63830fcf6de42685e))
+* update readme ([#637](https://github.com/twilio/twilio-cli/issues/637)) ([e50de64](https://github.com/twilio/twilio-cli/commit/e50de6436cdc2070a41a4fd3f4836ac4566b065e))
+* Update rollback.yaml ([#628](https://github.com/twilio/twilio-cli/issues/628)) ([d5e248a](https://github.com/twilio/twilio-cli/commit/d5e248a1a5281229d6cb02891616089a2454640c))
+* Upgrade guide node 20 ([#638](https://github.com/twilio/twilio-cli/issues/638)) ([2d41ce9](https://github.com/twilio/twilio-cli/commit/2d41ce931615201c95abeb816be9cae751e43574))
+* upgrade node version ([#622](https://github.com/twilio/twilio-cli/issues/622)) ([f83089f](https://github.com/twilio/twilio-cli/commit/f83089f68a0269cb0b6e542b54b7779d73a3fa26))
+
+--------------------------
+**Api**
+- Change DependentPhoneNumber `capabilities` type `object` and `date_created`, `date_updated` to `date_time<rfc2822>`
+- Updated the `Default` value from 0 to 1 in the Recordings Resource `channels` property
+
+**Serverless**
+- Update `ienum` type level in Logs api
+
+**Verify**
+- Update Channel list in Verify Attempst API
+- Update `ienum` type for Conversion_Status in Verify Attempts API
+
+**Twiml**
+- Add `us2` to the list of supported values for the region attribute in the `<Conference>` TwiML noun.
+
+
+--------------------------
+**Api**
+- Added several usage category enums to `usage_record` API
+
+**Numbers**
+- Update the porting documentation
+
+**Verify**
+- Update `ienum` type for Channels in Verify Attempts API
+
+
+--------------------------
+**Accounts**
+- Changes to add date_of_consent param in Bulk Consent API
+
+**Api**
+- Change `friendly_name`, `date_created` and `date_updated` properties to type `string`.
+
+**Twiml**
+- Update twiml definition for `<ConversationRelay>` and `<Assistant>`
+
+
+--------------------------
+**Api**
+- Add `response_key` for `Usage Triggers` fetch endpoint.
+
+**Flex**
+- Add Update Interaction API
+- Adding `webhook_ttid` as optional parameter in Interactions API
+
+**Serverless**
+- Add node22 as a valid Build runtime
+- Add node20 as a valid Build runtime
+
+**Video**
+- removed `transcribe_participants_on_connect` and `transcriptions_configuration` from the room resource **(breaking change)**
+- Added `transcribe_participants_on_connect` and `transcriptions_configuration` to the room resource
+
+
+--------------------------
+**Library - Chore**
+- [PR #131](https://github.com/twilio/twilio-oai/pull/131): Trigger cli core release. Thanks to [@sbansla](https://github.com/sbansla)!
+
+**Library - Fix**
+- [PR #130](https://github.com/twilio/twilio-oai/pull/130): added a commit to trigger cli-core release. Thanks to [@sbansla](https://github.com/sbansla)!
+
+**Studio**
+- Add documentation for parent_step_sid field in Step resource
+
+## [5.23.1](https://github.com/twilio/twilio-cli/compare/5.23.0...5.23.1) (2025-03-28)
+
+
+### Library - Chores
+
+* Update CHANGES.md ([#624](https://github.com/twilio/twilio-cli/issues/624)) ([be2e639](https://github.com/twilio/twilio-cli/commit/be2e63919ac5c173422b7c663138c01f546f5068))
+
+5.23.1
+
+## [5.23.1](https://github.com/twilio/twilio-cli/compare/5.23.0...5.23.1) (2025-03-28)
+
+--------------------------
+**Accounts**
+- Update Safelist API docs as part of prefix supoort
+
+**Flex**
+- Removing `first_name`, `last_name`, and `friendly_name` from the Flex User API
+
+**Messaging**
+- Add missing tests under transaction/phone_numbers and transaction/short_code
+
+## [5.23.0](https://github.com/twilio/twilio-cli/compare/5.22.12...5.23.0) (2025-03-11)
+
+
+### Library - Chores
+
+* ignoring .git folder in docker image ([#621](https://github.com/twilio/twilio-cli/issues/621)) ([f9c98eb](https://github.com/twilio/twilio-cli/commit/f9c98eb43b1aa93c2c2b546d4e0f86a4e071da37))
+
+--------------------------
+**Api**
+- Add the missing  field for  endpoints
+
+**Messaging**
+- Add missing enums for A2P and TF
+
+**Numbers**
+- add missing enum values to hosted_number_order_status
+
+**Twiml**
+- Convert Twiml Attribute  of type enum to string **(breaking change)**
+
+## [5.22.12](https://github.com/twilio/twilio-cli/compare/5.22.11...5.22.12) (2025-02-20)
+
+---------------------------
+**Flex**
+- Adding Digital Transfers APIs under v1/Interactions
+
+**Numbers**
+- Convert webhook_type to ienum type in v1/Porting/Configuration/Webhook/{webhook_type}
+
+**Trusthub**
+- Changing TrustHub SupportingDocument status enum from lowercase to uppercase since kyc-orch returns status capitalized and rest proxy requires strict casing
+
+## [5.22.11](https://github.com/twilio/twilio-cli/compare/5.22.10...5.22.11) (2025-02-11)
+
+---------------------------
+**Api**
+- Change downstream url and change media type for file .
+
+**Intelligence**
+- Add json_results for Generative JSON operator results
+
+**Messaging**
+- Add DestinationAlphaSender API to support Country-Specific Alpha Senders
+
+**Video**
+- Change codec type from enum to case-insensitive enum in recording and room_recording apis
+
+## [5.22.10](https://github.com/twilio/twilio-cli/compare/5.22.9...5.22.10) (2025-01-28)
+
+---------------------------
+**Api**
+- Add open-api file tag to  and .
+
+**Events**
+- Add support for subaccount subscriptions (beta)
+
+**Insights**
+- add new region to conference APIs
+
+**Lookups**
+- Add new  query parameter to the lookup request
+
+## [5.22.9](https://github.com/twilio/twilio-cli/compare/5.22.8...5.22.9) (2025-01-13)
+
+---------------------------
+**Messaging**
+- Adds validity period Default value in service resource documentation
+
+## [5.22.8](https://github.com/twilio/twilio-cli/compare/5.22.7...5.22.8) (2025-01-10)
+
+
+### Library - Chores
+
+* update base64 --output flag to > ([#615](https://github.com/twilio/twilio-cli/issues/615)) ([7d8ce33](https://github.com/twilio/twilio-cli/commit/7d8ce33947603289a57aa58ddcdbe8734e19f17d))
+* upgarde to macos13 ([#614](https://github.com/twilio/twilio-cli/issues/614)) ([b14834a](https://github.com/twilio/twilio-cli/commit/b14834a17f644327bc22c67d44b681ad97304992))
+* upgrade to macos-13 in acceptance test ([#616](https://github.com/twilio/twilio-cli/issues/616)) ([32e52b3](https://github.com/twilio/twilio-cli/commit/32e52b31f4af9e53a2c0b159feb7f0a440db7069))
+
+--------------------------
+**Numbers**
+- Change beta feature flag to use v2/BulkHostedNumberOrders
+
+
+--------------------------
+**Library - Chore**
+- [PR #126](https://github.com/twilio/twilio-oai/pull/126): release twilio-oai. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+
+## [5.22.7](https://github.com/twilio/twilio-cli/compare/5.22.6...5.22.7) (2024-12-05)
+
+--------------------------
+**Api**
+- Add optional parameter  to 
+- Updated  to be populated for sip trunking terminating calls.
+
+**Numbers**
+- Add Update Hosted Number Order V2 API endpoint
+- Update Port in docs
+
+**Twiml**
+- Add optional parameter  to 
+- Add support for new  and  noun
+- Add  attribute to  verb
+
+## [5.22.6](https://github.com/twilio/twilio-cli/compare/5.22.5...5.22.6) (2024-11-15)
+
+--------------------------
+**Api**
+- Added  and  to  API.
+- Add open-api file tag to realtime_transcriptions
+
+**Taskrouter**
+- Add  property to workers reservation
+- Add  property to task reservation
+
+## [5.22.5](https://github.com/twilio/twilio-cli/compare/5.22.4...5.22.5) (2024-10-24)
+
+
+### Library - Chores
+
+* bump cli-core version ([#613](https://github.com/twilio/twilio-cli/issues/613)) ([1b8bc14](https://github.com/twilio/twilio-cli/commit/1b8bc149536d4e958ed09bb49f4c7362b6657ab4))
+
+--------------------------
+**Conversations**
+- Expose ConversationWithParticipants resource that allows creating a conversation with participants
+
+## [5.22.4](https://github.com/twilio/twilio-cli/compare/5.22.3...5.22.4) (2024-10-17)
+
+
+### Library - Chores
+
+* update lib versions for security vulnerabilities ([#612](https://github.com/twilio/twilio-cli/issues/612)) ([9410baf](https://github.com/twilio/twilio-cli/commit/9410baf5a4d4c49e54e832d999b78f3d50b2402b))
+
+--------------------------
+**Api**
+- Add response key  to fetch AvailablePhoneNumber resource by specific country.
+
+**Messaging**
+- Make library and doc public for requestManagedCert Endpoint
+
+## [5.22.3](https://github.com/twilio/twilio-cli/compare/5.22.2...5.22.3) (2024-10-03)
+
+
+### Library - Chores
+
+* add support to pass empty string params ([#609](https://github.com/twilio/twilio-cli/issues/609)) ([b1fce3a](https://github.com/twilio/twilio-cli/commit/b1fce3a29c6588c8e123eae3a5086a2b1bfa27fd))
+
+--------------------------
+**Messaging**
+- Add A2P external campaign CnpMigration flag
+
+**Numbers**
+- Add address sid to portability API
+
+**Verify**
+- Add  optional parameter on Verification check.
+- Add  optional parameter for Verification creation.
+
+## [5.22.2](https://github.com/twilio/twilio-cli/compare/5.22.1...5.22.2) (2024-09-25)
+
+
+### Library - Chores
+
+* bump download-artifact to v4 ([#608](https://github.com/twilio/twilio-cli/issues/608)) ([0515ece](https://github.com/twilio/twilio-cli/commit/0515ece9a927f1cf75a5742c65445d8297f4f065))
+* bump upload artifact to v4 ([#607](https://github.com/twilio/twilio-cli/issues/607)) ([59b87f7](https://github.com/twilio/twilio-cli/commit/59b87f7dbeb736d120a158aa8a36e1026ae4a5c0))
+
+--------------------------
+**Library - Chore**
+- [PR #121](https://github.com/twilio/twilio-oai/pull/121): content sdk changes moved to content v1 in internal open api repo. Thanks to [@sbansla](https://github.com/sbansla)!
+
+**Accounts**
+- Update docs and mounts.
+- Change library visibility to public
+- Enable consent and contact bulk upsert APIs in prod.
+
+**Serverless**
+- Add is_plugin parameter in deployments api to check if it is plugins deployment
+
+## [5.22.1](https://github.com/twilio/twilio-cli/compare/5.22.0...5.22.1) (2024-09-18)
+
+
+### Library - Chores
+
+* update to macos-12 ([#605](https://github.com/twilio/twilio-cli/issues/605)) ([661c8cc](https://github.com/twilio/twilio-cli/commit/661c8cc065010c396b95e1cc2f4ac594c2f22178))
+* upgrading to macos-12 as macos-11 support is dropped ([#604](https://github.com/twilio/twilio-cli/issues/604)) ([070a20d](https://github.com/twilio/twilio-cli/commit/070a20d060c30cb5dc59b4929cf33fb2ce0856e7))
+
+--------------------------
+**Intelligence**
+- Remove public from operator_type
+- Update operator_type to include general-availablity and deprecated
+
+**Numbers**
+- Remove beta flag for bundle clone API
+
+## [5.22.0](https://github.com/twilio/twilio-cli/compare/5.21.2...5.22.0) (2024-09-05)
+
+--------------------------
+**Iam**
+- updated library_visibility public for new public apikeys
+
+**Numbers**
+- Add new field in Error Codes for Regulatory Compliance.
+- Change typing of Port In Request date_created field to date_time instead of date **(breaking change)**
+
+## [5.21.2](https://github.com/twilio/twilio-cli/compare/5.21.1...5.21.2) (2024-08-26)
+
+--------------------------
+**Library - Fix**
+- [PR #116](https://github.com/twilio/twilio-oai/pull/116): Removing pascal case rule for query and path params. Changing the spec files for orgs api. Thanks to [@AsabuHere](https://github.com/AsabuHere)!
+
+**Api**
+- Update documentation of  and  on the Message resource.
+- Remove generic parameters from  resource
+- Added public documentation for Payload Data retrieval API
+
+**Flex**
+- Adding update Flex User api
+
+**Insights**
+- Added 'branded', 'business_profile' and 'voice_integrity' fields in List Call Summary
+
+**Intelligence**
+- Add  array information to the Sentences v2 entity.
+- Add , , and  headers for Operator Results.
+- Change the path parameter when fetching an  from  to  to support searching by SID or by name
+- Add , , and  headers for Transcript and Service endpoints.
+
+**Messaging**
+- Adds two new channel senders api to add/remove channel senders to/from a messaging service
+- Extend ERC api to accept an optional attribute in request body to indicate CNP migration for an ERC
+
+**Numbers**
+- Modify visibility to public in bundle clone API
+- Add  field to Port In Request and Port In Phone Numbers Fetch APIs
+- Change properties docs for port in phone numbers api
+- Add is_test body param to the Bundle Create API
+- Change properties docs for port in api
+
+**Trusthub**
+- Add new field in themeSetId in compliance_inquiry.
+
+**Verify**
+- Update  description on verification docs
+
+
+--------------------------
+**Library - Chore**
+- [PR #114](https://github.com/twilio/twilio-oai/pull/114): remove empty models. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+
+**Intelligence**
+- Deprecate account flag api.twilio-intelligence.v2
+
+## [5.21.1](https://github.com/twilio/twilio-cli/compare/5.21.0...5.21.1) (2024-06-27)
+
+
+### Library - Chores
+
+* adding check for undefined pathType ([#599](https://github.com/twilio/twilio-cli/issues/599)) ([fd203c9](https://github.com/twilio/twilio-cli/commit/fd203c9eefcf026150fcdf846a478c048742bfb0))
+
+## [5.21.0](https://github.com/twilio/twilio-cli/compare/5.20.1...5.21.0) (2024-06-18)
+
+
+### Library - Chores
+
+* Update node version in Dockerfile ([#597](https://github.com/twilio/twilio-cli/issues/597)) ([5d96ef7](https://github.com/twilio/twilio-cli/commit/5d96ef7eba63f92c36a8ab79d3b8beef4b1eed2b))
+* upgrading to centos:stream9 ([#598](https://github.com/twilio/twilio-cli/issues/598)) ([8118332](https://github.com/twilio/twilio-cli/commit/8118332a1a082f156f43af198ed24795aaa90376))
+
+--------------------------
+
+**Library - Feature**
+- [PR #111](https://github.com/twilio/twilio-oai/pull/111): Merge branch '2.0.0-rc' into main. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)! **(breaking change)**
+- [PR #110](https://github.com/twilio/twilio-oai/pull/110): Merge branch '2.0.0-rc' into main. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)! **(breaking change)**
+
+**Events**
+- Add  and  to Event Types
+
+**Lookups**
+- Removed unused  lookups in V1 only to facilitate rest proxy migration
+
+**Numbers**
+- Add date_created field to the Get Port In Request API
+- Rename the  field to  in the Get Port In Phone Number API **(breaking change)**
+- Add Rejection reason and rejection reason code to the Get Port In Phone Number API
+- Remove the carrier information from the Portability API
+
+**Proxy**
+- Change property  from enum to ienum
+
+**Trusthub**
+- Add skipMessagingUseCase field in compliance_tollfree_inquiry.
+
+## [5.20.1](https://github.com/twilio/twilio-cli/compare/5.20.0...5.20.1) (2024-06-06)
+
+
+### Library - Chores
+
+* changes for upgrading to actions/github 6.0.0 ([#596](https://github.com/twilio/twilio-cli/issues/596)) ([4b4a3d6](https://github.com/twilio/twilio-cli/commit/4b4a3d6db497a90b78d5acbcb23f6cd950908e19))
+
+---------------------------
+**Api**
+- Mark MaxPrice as obsolete
+
+**Lookups**
+- Update examples for 
+
+**Messaging**
+- List tollfree verifications on parent account and all sub-accounts
+
+## [5.20.0](https://github.com/twilio/twilio-cli/compare/5.19.4...5.20.0) (2024-05-24)
+
+
+### Library - Chores
+
+* bump cli-core version ([#594](https://github.com/twilio/twilio-cli/issues/594)) ([ddb58fc](https://github.com/twilio/twilio-cli/commit/ddb58fc014d1d327b6d3cf0ec100d5a039063f6c))
+* node18+ supported and lodash vulnerability fixed ([#592](https://github.com/twilio/twilio-cli/issues/592)) ([cdb75ff](https://github.com/twilio/twilio-cli/commit/cdb75ff855af83e1a386ecbdef70b352d7f10662))
+
+---------------------------
+**Api**
+- Add ie1 as supported region for UserDefinedMessage and UserDefinedMessageSubscription.
+
+**Flex**
+- Adding validated field to 
+- Corrected the data type for , , , ,  in Flex Configuration
+- Making  optional in Create Interactions endpoint
+
+**Intelligence**
+- Expose operator authoring apis to public visibility
+- Deleted  parameter from updating service in v2 **(breaking change)**
+- Add read_only_attached_operator_sids to v2 services
+
+**Numbers**
+- Add API endpoint for GET Porting Webhook Configurations By Account SID
+- Remove bulk portability api under version . **(breaking change)**
+- Removed porting_port_in_fetch.json files and move the content into porting_port_in.json files
+- Add API endpoint to deleting Webhook Configurations
+- Add Get Phone Number by Port in request SID and Phone Number SID api
+- Add Create Porting webhook configuration API
+- Added bundle_sid and losing_carrier_information fields to Create PortInRequest api to support Japan porting
+
+**Taskrouter**
+- Add back  property to tasks
+- Add back  property to tasks
+- Removing  property to tasks due to revert
+- Removing  property to tasks due to revert
+- Add  property to tasks
+- Add  property to tasks
+
+**Trusthub**
+- Add new field errors to bundle as part of public API response in customer_profile.json and trust_product.json **(breaking change)**
+- Add themeSetId field in compliance_tollfree_inquiry.
+
+**Verify**
+- Update  description on service docs
+
+### [5.19.4](https://github.com/twilio/twilio-cli/compare/5.19.3...5.19.4) (2024-04-18)
+
+---------------------------
+**Flex**
+- Add header  to  API
+
+**Messaging**
+- Redeploy after failed pipeline
+
+**Numbers**
+- Add Delete Port In request phone number api and Add Delete Port In request api
+
+### [5.19.3](https://github.com/twilio/twilio-cli/compare/5.19.2...5.19.3) (2024-04-04)
+
+---------------------------
+**Api**
+- Correct conference filtering by date_created and date_updated documentation, clarifying that times are UTC.
+
+**Flex**
+- Remove optional parameter from  and it to 
+
+**Lookups**
+- Add new  package to the lookup response
+
+**Messaging**
+- Cleanup api.messaging.next-gen from Messaging Services endpoints
+- Readd Sending-Window after fixing test failure
+
+**Verify**
+- Add  and  parameters to create, update, get and list of services endpoints
+
+**Voice**
+- Correct conference filtering by date_created and date_updated documentation, clarifying that times are UTC.
+
+**Twiml**
+- Add new  value  for  verb
+
+### [5.19.2](https://github.com/twilio/twilio-cli/compare/5.19.1...5.19.2) (2024-04-01)
+
+---------------------------
+**Api**
+- Add property  to conference participant resource
+- Update RiskCheck documentation
+- Correct call filtering by start and end time documentation, clarifying that times are UTC.
+
+**Flex**
+- Adding optional parameter to 
+
+**Media**
+- Remove API: MediaProcessor
+
+**Messaging**
+- Remove Sending-Window due to test failure
+- Add Sending-Window as a response property to Messaging Services, gated by a beta feature flag
+
+**Numbers**
+- Correct valid_until_date field to be visible in Bundles resource
+- Adding port_in_status field to the Port In resource and phone_number_status and sid fields to the Port In Phone Number resource
+
+**Oauth**
+- Modified token endpoint response
+- Added refresh_token and scope as optional parameter to token endpoint
+
+**Trusthub**
+- Add update inquiry endpoint in compliance_registration.
+- Add new field in themeSetId in compliance_registration.
+
+**Voice**
+- Correct call filtering by start and end time documentation, clarifying that times are UTC.
+
+**Twiml**
+- Add support for new Google voices (Q1 2024) for  verb - gu-IN voices
+- Add support for new Amazon Polly and Google voices (Q1 2024) for  verb - Niamh (en-IE) and Sofie (da-DK) voices
+
+
+---------------------------
+**Oauth**
+- Add new APIs for vendor authorize and token endpoints
+
+### [5.19.1](https://github.com/twilio/twilio-cli/compare/5.19.0...5.19.1) (2024-03-12)
+
+
+### Library - Chores
+
+* added digicert certificate for windows release ([#582](https://github.com/twilio/twilio-cli/issues/582)) ([ab43264](https://github.com/twilio/twilio-cli/commit/ab43264b0d143a23b428b429e5eda12e3020a2a0))
+
+---------------------------
+**Api**
+- Correct precedence documentation for application_sid vs status_callback in message creation
+- Mark MaxPrice as deprecated
+
+**Flex**
+- Making  visibility to public
+
+**Messaging**
+- Add new  attribute to the Brand Registration resource.
+- Mark  attribute as deprecated.
+- Mark  attribute as deprecated.
+- The new  attribute is expected to provide additional information about Brand registration failures and feedback (if any has been provided by The Campaign Registry). Consumers should use this attribute instead of  and .
+
+**Numbers**
+- Correcting mount_name for porting port in fetch API
+
+**Trusthub**
+- Add new field in statusCallbackUrl in compliance_registration.
+- Add new field in isvRegisteringForSelfOrTenant in compliance_registration.
+
+**Twiml**
+- Expanded description of Action parameter for Message verb
+
+## [5.19.0](https://github.com/twilio/twilio-cli/compare/5.18.0...5.19.0) (2024-02-27)
+
+
+### Library - Chores
+
+* corrected changes.md identation ([#585](https://github.com/twilio/twilio-cli/issues/585)) ([9236f6e](https://github.com/twilio/twilio-cli/commit/9236f6e6e162f55696f4efe1229f9cb533a2e0d8))
+
+---------------------------
+**Api**
+- remove feedback and feedback summary from call resource
+
+**Flex**
+- Adding  to Interactions Channels Participant
+
+**Lookups**
+- Add new  package to the lookup response
+- Remove  package from the lookup response **(breaking change)**
+
+**Messaging**
+- Add tollfree multiple rejection reasons response array
+
+**Trusthub**
+- Add ENUM for businessRegistrationAuthority in compliance_registration. **(breaking change)**
+- Add new field in isIsvEmbed in compliance_registration.
+- Add additional optional fields in compliance_registration for Individual business type.
+
+**Twiml**
+- Add support for new Amazon Polly and Google voices (Q1 2024) for  verb
+
+## [5.18.0](https://github.com/twilio/twilio-cli/compare/5.17.1...5.18.0) (2024-02-09)
+
+---------------------------
+**Library - Chore**
+- [PR #103](https://github.com/twilio/twilio-oai/pull/103): initiate cli release commit. Thanks to [@sbansla](https://github.com/sbansla)!
+
+**Api**
+- Updated service base url for connect apps and authorized connect apps APIs **(breaking change)**
+- Update documentation to reflect RiskCheck GA
+- Added optional parameter  for create participant api
+
+**Events**
+- Marked as GA
+
+**Flex**
+- Adding  to Flex Configuration
+- Adding  for Email Manager
+- Adding  to Flex Configuration
+
+**Insights**
+- add flag to restrict access to unapid customers
+- decommission voice-qualitystats-endpoint role
+
+**Intelligence**
+- Add text-generation operator (for example conversation summary) results to existing OperatorResults collection.
+
+**Lookups**
+- Remove  field from  and leave  **(breaking change)**
+- Remove carrier information from call forwarding package **(breaking change)**
+
+**Messaging**
+- Add update instance endpoints to us_app_to_person api
+- Add tollfree edit_allowed and edit_reason fields
+- Update Phone Number, Short Code, Alpha Sender, US A2P and Channel Sender documentation
+- Add DELETE support to Tollfree Verification resource
+
+**Numbers**
+- Add Get Port In request api
+
+**Push**
+- Migrated to new Push API V4 with Resilient Notification Delivery.
+
+**Serverless**
+- Add node18 as a valid Build runtime
+
+**Taskrouter**
+- Add  param in update reservation
+- Add container attribute to task_queue_bulk_real_time_statistics endpoint
+- Remove beta_feature check on task_queue_bulk_real_time_statistics endpoint
+
+**Trusthub**
+- Add optional field NotificationEmail to the POST /v1/ComplianceInquiries/Customers/Initialize API
+- Add additional optional fields in compliance_tollfree_inquiry.json
+- Rename did to tollfree_phone_number in compliance_tollfree_inquiry.json
+- Add new optional field notification_email to compliance_tollfree_inquiry.json
+
+**Verify**
+-  property added again to Public Docs **(breaking change)**
+- Remove  from Public Docs **(breaking change)**
+- Add  parameter to service create and update endpoints.
+- Add  optional parameter on Verification creation.
+- Update Verify TOTP maturity to GA.
+
+## [5.17.1](https://github.com/twilio/twilio-cli/compare/5.17.0...5.17.1) (2024-01-30)
+
+
+### Library - Fixes
+
+* enabled npm publish ([#578](https://github.com/twilio/twilio-cli/issues/578)) ([ef9bfce](https://github.com/twilio/twilio-cli/commit/ef9bfce551b885035d8e7d05a95feeab25b1f21f))
+
+
+### Library - Chores
+
+* added missing file ([cd0fc69](https://github.com/twilio/twilio-cli/commit/cd0fc69504ba5771608b9645f98ca57d48598d9b))
+* added support for SafeList query params ([#565](https://github.com/twilio/twilio-cli/issues/565)) ([4294166](https://github.com/twilio/twilio-cli/commit/4294166929f36a345cf104180896a791db6f9ff8))
+* upgraded cli-core version and skip healthcheck api ([#573](https://github.com/twilio/twilio-cli/issues/573)) ([b2ce3e5](https://github.com/twilio/twilio-cli/commit/b2ce3e5706067152c5f7de9194605c9b248265e2))
+
+**Oauth**
+- updated openid discovery endpoint uri **(breaking change)**
+- Added device code authorization endpoint
+- added oauth JWKS endpoint
+- Get userinfo resource
+- OpenID discovery resource
+- Add new API for token endpoint
+
 ## [5.17.0](https://github.com/twilio/twilio-cli/compare/5.16.3...5.17.0) (2023-12-14)
 
 ---------------------------
@@ -20,11 +712,15 @@
 - Add additional optional fields in compliance_tollfree_inquiry.json
 
 **Verify**
-- Remove  from Public Docs **(breaking change)**### [5.16.3](https://github.com/twilio/twilio-cli/compare/5.16.2...5.16.3) (2023-12-01)
+- Remove  from Public Docs **(breaking change)**
+
+## [5.16.3](https://github.com/twilio/twilio-cli/compare/5.16.2...5.16.3) (2023-12-01)
 
 ---------------------------
 **Verify**
-- Add  parameter to service create and update endpoints.### [5.16.2](https://github.com/twilio/twilio-cli/compare/5.16.1...5.16.2) (2023-11-17)
+- Add  parameter to service create and update endpoints.
+ 
+## [5.16.2](https://github.com/twilio/twilio-cli/compare/5.16.1...5.16.2) (2023-11-17)
 
 ---------------------------
 **Library - Chore**
@@ -45,7 +741,9 @@
 - Add new optional field notification_email to compliance_tollfree_inquiry.json
 
 **Verify**
-- Add  optional parameter on Verification creation.### [5.16.1](https://github.com/twilio/twilio-cli/compare/5.16.0...5.16.1) (2023-11-06)
+- Add  optional parameter on Verification creation.
+
+## [5.16.1](https://github.com/twilio/twilio-cli/compare/5.16.0...5.16.1) (2023-11-06)
 
 ---------------------------
 **Flex**
@@ -61,7 +759,9 @@
 - Add node18 as a valid Build runtime
 
 **Verify**
-- Update Verify TOTP maturity to GA.## [5.16.0](https://github.com/twilio/twilio-cli/compare/5.15.0...5.16.0) (2023-10-19)
+- Update Verify TOTP maturity to GA.
+
+## [5.16.0](https://github.com/twilio/twilio-cli/compare/5.15.0...5.16.0) (2023-10-19)
 
 ---------------------------
 **Accounts**
@@ -92,7 +792,9 @@
 
 ---------------------------
 **Lookups**
-- Add test api support for Lookup v2## [5.15.0](https://github.com/twilio/twilio-cli/compare/5.14.0...5.15.0) (2023-09-21)
+- Add test api support for Lookup v2
+
+## [5.15.0](https://github.com/twilio/twilio-cli/compare/5.14.0...5.15.0) (2023-09-21)
 
 ---------------------------
 **Conversations**
@@ -105,7 +807,9 @@
 
 **Taskrouter**
 - Add Update Queues, Workers, Workflow Real Time Statistics API to flex-rt-data-api-v2 endpoint
-- Add Update Workspace Real Time Statistics API to flex-rt-data-api-v2 endpoint## [5.14.0](https://github.com/twilio/twilio-cli/compare/5.13.0...5.14.0) (2023-09-08)
+- Add Update Workspace Real Time Statistics API to flex-rt-data-api-v2 endpoint
+
+## [5.14.0](https://github.com/twilio/twilio-cli/compare/5.13.0...5.14.0) (2023-09-08)
 
 ---------------------------
 **Api**
@@ -122,9 +826,13 @@
 - Renaming sid for bulk_hosting_sid and remove account_sid response field in numbers/v2/BulkHostedNumberOrders **(breaking change)**
 
 **Pricing**
-- gate resources behind a beta_feature## [5.13.0](https://github.com/twilio/twilio-cli/compare/5.12.0...5.13.0) (2023-08-24)
+- gate resources behind a beta_feature
 
----------------------------\n**Api**\n- Add new property  for SMS pumping protection feature only (public beta to be available soon): Include this parameter with a value of  to skip any kind of risk check on the respective message request\n\n**Flex**\n- Changing  path param to  in interaction channel participant update endpoint **(breaking change)**\n\n**Messaging**\n- Add Channel Sender api\n- Fixing country code docs and removing Zipwhip references\n\n**Numbers**\n- Request status changed in numbers/v2/BulkHostedNumberOrders **(breaking change)**\n- Add bulk hosting orders API under version /v2## [5.12.0](https://github.com/twilio/twilio-cli/compare/5.11.0...5.12.0) (2023-08-14)
+## [5.13.0](https://github.com/twilio/twilio-cli/compare/5.12.0...5.13.0) (2023-08-24)
+
+---------------------------\n**Api**\n- Add new property  for SMS pumping protection feature only (public beta to be available soon): Include this parameter with a value of  to skip any kind of risk check on the respective message request\n\n**Flex**\n- Changing  path param to  in interaction channel participant update endpoint **(breaking change)**\n\n**Messaging**\n- Add Channel Sender api\n- Fixing country code docs and removing Zipwhip references\n\n**Numbers**\n- Request status changed in numbers/v2/BulkHostedNumberOrders **(breaking change)**\n- Add bulk hosting orders API under version /v2
+
+## [5.12.0](https://github.com/twilio/twilio-cli/compare/5.11.0...5.12.0) (2023-08-14)
 
 
 ### Library - Chores
@@ -160,7 +868,9 @@
 **Twiml**
 - Added support for he-il inside of ssm_lang.json that was missing
 - Added support for he-il language in say.json that was missing
-- Add  and  attributes to .## [5.11.0](https://github.com/twilio/twilio-cli/compare/5.10.0...5.11.0) (2023-07-13)
+- Add  and  attributes to
+
+## [5.11.0](https://github.com/twilio/twilio-cli/compare/5.10.0...5.11.0) (2023-07-13)
 
 ---------------------------
 **Flex**
@@ -180,7 +890,9 @@
 - Add  optional parameter on Verification creation.
 
 **Twiml**
-- Add Google Voices and languages## [5.10.0](https://github.com/twilio/twilio-cli/compare/5.9.0...5.10.0) (2023-06-28)
+- Add Google Voices and languages
+
+## [5.10.0](https://github.com/twilio/twilio-cli/compare/5.9.0...5.10.0) (2023-06-28)
 
 ---------------------------
 **Lookups**
@@ -190,7 +902,9 @@
 - Add hosted_number_order under version .
 - Update properties in Porting and Bulk Porting APIs. **(breaking change)**
 - Added bulk Portability API under version .
-- Added Portability API under version .## [5.9.0](https://github.com/twilio/twilio-cli/compare/5.8.2...5.9.0) (2023-06-15)
+- Added Portability API under version
+
+## [5.9.0](https://github.com/twilio/twilio-cli/compare/5.8.2...5.9.0) (2023-06-15)
 
 
 ### Library - Fixes
@@ -203,7 +917,9 @@
 - Removed  as optional field **(breaking change)**
 
 **Insights**
-- Added  to list summary output### [5.8.2](https://github.com/twilio/twilio-cli/compare/5.8.1...5.8.2) (2023-06-01)
+- Added  to list summary output
+
+## [5.8.2](https://github.com/twilio/twilio-cli/compare/5.8.1...5.8.2) (2023-06-01)
 
 
 ### Library - Fixes
@@ -219,7 +935,9 @@
 - First public beta release for Voice Intelligence APIs with client libraries
 
 **Messaging**
-- Add new  attribute to us_app_to_person resource. This attribute will provide additional information about campaign registration errors.### [5.8.1](https://github.com/twilio/twilio-cli/compare/5.8.0...5.8.1) (2023-05-18)
+- Add new  attribute to us_app_to_person resource. This attribute will provide additional information about campaign registration errors.
+
+## [5.8.1](https://github.com/twilio/twilio-cli/compare/5.8.0...5.8.1) (2023-05-18)
 
 ---------------------------
 **Conversations**
@@ -234,7 +952,9 @@
 - Add  to link shortening domain_config properties
 
 **Numbers**
-- Add bulk_eligibility api under version .## [5.8.0](https://github.com/twilio/twilio-cli/compare/5.7.0...5.8.0) (2023-05-04)
+- Add bulk_eligibility api under version
+
+## [5.8.0](https://github.com/twilio/twilio-cli/compare/5.7.0...5.8.0) (2023-05-04)
 
 
 ### Library - Fixes
